@@ -1,0 +1,10 @@
+<% provide(:page_title, "Leran Web In") %>
+<% provide(:blog_active, "active") %>
+
+<div class="row">
+    <%= render @posts %>    
+</div>  
+
+<div>
+    <%= will_paginate @posts, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
+</div>

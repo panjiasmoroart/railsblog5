@@ -1,0 +1,11 @@
+default:
+  plugins:
+    - image
+    - link
+    - codesample  
+    - media  
+    - code   
+  toolbar: "undo redo | styleselect | bold italic link | alignleft aligncenter alignright alignjustify | codesample image media | code"
+
+alternate:
+  selector: textarea.table-editor

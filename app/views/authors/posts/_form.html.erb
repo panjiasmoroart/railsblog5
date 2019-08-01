@@ -1,0 +1,67 @@
+<%= form_for(post, url: url) do |form| %>
+  <!-- panggil helper tinymce -->
+  <%= tinymce %>
+  
+  <% if post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+      <% post.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="card">
+          <div class="card-body">
+              <% if @post.new_record? %>
+                  <h4 class="card-title">New Posts</h4>
+              <% else %>
+                  <h4 class="card-title">Edit Posts</h4> 
+              <% end %>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+                <%= form.label :title %>
+                <%= form.text_field :title, class: 'form-control' %> 
+            </li>
+            <li class="list-group-item">
+                <%= form.label :banner_image_url %>
+                <%= form.text_field :banner_image_url, class: 'form-control' %> 
+            </li>
+            <li class="list-group-item">
+                <%= form.label :description %>
+                <%= form.text_area :description, class: 'form-control tinymce' %> 
+            </li>
+            <li class="list-group-item">
+                <%= form.label 'Tags' %>
+                <%= form.text_area :tag_list, class: 'form-control' %> 
+            </li>
+          </ul>
+          <div class="card-body">
+              <%= form.submit "Save", class: 'btn btn-primary form-control'  %>
+          </div>
+      </div><br />    
+      <!-- cek apakah dia record yang sudah ada isinya -->
+      <% if @post.persisted? %>
+         <%= link_to 'Show', @post %> |
+      <% end %>
+         <%= link_to 'Back', authors_posts_path %>
+    </div><!-- end col-lg-4 --> 
+
+    <div class="col-lg-8">
+      <div class="card">
+        <div class="card-hearder">
+            <h4 class="card-title">Body</h4>
+        </div>
+        <%= form.text_area :body, class: 'form-control tinymce', rows: 21 %> 
+      </div> 
+    </div>
+  </div><!-- end row -->
+
+<% end %>
+<br /><br />

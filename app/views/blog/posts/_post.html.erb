@@ -1,0 +1,18 @@
+<div class="col-12 col-sm-6 col-md-4 col-lg-4">
+    <div class="card-content">
+        <div class="card-img">
+            <img src="<%= post.banner_image_url %>" alt="">
+            <!-- <span><h4>heading</h4></span> -->
+        </div>
+
+        <div class="card-desc">
+            <h3><%= link_to post.title.titleize[0...24], post %></h3>
+            <p><%= raw post.tags.map { |t| link_to t.name.titleize, posts_path(tag: t.name) }.join(', ') %></p>
+            <span class="published-date"><%= post.display_day_published %></span>
+            <%= post.description[0...120].html_safe %>...
+            <p><%= link_to "Read", post, class: 'btn-card' %></p>
+        </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,70 @@
+  <%# binding.pry %>
+
+
+  <div class="row">
+        <!-- basic info -->
+        <div class="col-md-6">
+            <%= form_tag authors_info_path, method: :put do %>
+                <%= fields_for :author do |f| %>
+                      <div class="card">
+                          <div class="card-body">
+                              <h4 class="card-title">Account Info</h4>
+                          </div>
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <%= image_tag(current_author.gravatar_image_url) %> 
+                            </li>
+                            <li class="list-group-item">
+                                <%= f.label :name %>
+                                <%= f.text_field :name, value: current_author.name, class: 'form-control' %> 
+                            </li>
+                            <li class="list-group-item">
+                                <%= f.label :email %>
+                                <%= f.text_field :email, value: current_author.email, class: 'form-control' %> 
+                            </li>
+                            <li class="list-group-item">
+                                <%= f.label :bio %>
+                                <%= f.text_area :bio, value: current_author.bio, class: 'form-control' %> 
+                            </li>
+                            <li class="list-group-item">
+                                <%= f.submit "Update Info", class: "btn btn-primary" %>
+                            </li>
+                          </ul>
+                      </div><br />    
+                <% end %>
+            <% end %>
+        </div><!-- end col-lg-6 --> 
+        <!-- end basic info -->
+    
+        <!-- change password -->
+        <div class="col-md-6">
+            <%= form_tag authors_change_password_path, method: :put do %>  
+                <%= fields_for :author do |f| %>
+                  <div class="card">
+                      <div class="card-body">
+                          <h4 class="card-title">Change Password</h4>
+                      </div>
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <%= f.label :current_password %>
+                            <%= f.password_field :current_password, class: 'form-control' %> 
+                        </li>
+                        <li class="list-group-item">
+                            <%= f.label :new_password %>
+                            <%= f.password_field :new_password, class: 'form-control' %> 
+                        </li>
+                        <li class="list-group-item">
+                            <%= f.label :new_password_confirmation %>
+                            <%= f.password_field :new_password_confirmation, class: 'form-control' %> 
+                        </li>
+                        <li class='list-group-item'>
+                            <%= f.submit "Change password", class: 'btn btn-warning' %>
+                        </li>
+                      </ul>
+                  </div><br />    
+                <% end %>
+            <% end %>
+        </div><!-- end col-lg-6 --> 
+        <!-- change password -->
+
+  </div><!-- end row -->

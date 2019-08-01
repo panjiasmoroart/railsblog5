@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+* {
+font-family: 'Open Sans', sans-serif;
+}
+
+// custom navbar right bootstrap 4
+/*
+.navbar-nav {
+  flex-direction: row;
+}
+
+.nav-link {
+  padding-right: .5rem !important;
+  padding-left: .5rem !important;
+}
+
+.ml-auto .dropdown-menu {
+  left: auto !important;
+  right: 0px;
+}
+*/
+
+.navbar {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    margin-bottom: 30px;
+}
+
+.author-nav img{
+  height: 30px;
+  width: 30px;
+  border-radius: 100%;
+}
+
+/* card details start  */
+section{
+    padding: 100px 0;
+}
+.details-card {
+	background: #ecf0f1;
+}
+
+.card-content {
+	background: #ffffff;
+	border: 4px;
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+  margin-bottom: 40px;
+}
+
+span.published-date {
+  display:block;
+  margin: 0;
+  font-size: 12px;
+}
+
+.card-img {
+	position: relative;
+	overflow: hidden;
+	border-radius: 0;
+	z-index: 1;
+}
+
+.card-img img {
+	width: 100%;
+	/*height: auto;*/
+  height: 190px;
+	display: block;
+}
+
+.card-img span {
+	position: absolute;
+    top: 15%;
+    left: 12%;
+	background-color: #007bff;
+    padding: 6px;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    transform: translate(-50%,-50%);
+}
+.card-img span h4{
+        font-size: 12px;
+        margin:0;
+        padding:10px 5px;
+         line-height: 0;
+}
+.card-desc {
+	padding: 1.25rem;
+}
+
+.card-desc h3 {
+	color: #000000;
+    font-weight: 600;
+    font-size: 1.5em;
+    line-height: 1.3em;
+    margin-top: 0;
+    margin-bottom: 5px;
+    padding: 0;
+}
+
+.card-desc p {
+	/*color: #747373;*/
+  font-size: 14px;
+	font-weight: 400;
+	line-height: 1.5;
+  margin: 10px 0 25px;
+	padding: 0;
+}
+.btn-card{
+	background-color: #007bff;
+	color: #fff;
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+    padding: .84rem 2.14rem;
+    font-size: .81rem;
+    -webkit-transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+    -o-transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+    margin: 0;
+    border: 0;
+    -webkit-border-radius: .125rem;
+    border-radius: .125rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    white-space: normal;
+    word-wrap: break-word;
+    color: #fff;
+}
+.btn-card:hover {
+    background: orange;
+}
+a.btn-card {
+    text-decoration: none;
+    color: #fff;
+}
+/* end card section */
+
+/* content detail */
+.content-detail-post{
+  overflow: hidden;
+}
+
+.content-detail-post p {
+  font-size: 14px;
+  line-height: 1.8em;
+}
+
+/* custom pagination */
+.apple_pagination {
+  background: #f1f1f1;
+  border: 1px solid #e5e5e5;
+  text-align: center;
+  padding: 1em;
+  cursor: default; }
+  .apple_pagination a, .apple_pagination span {
+    padding: 0.2em 0.3em; }
+  .apple_pagination .disabled {
+    color: #aaaaaa; }
+  .apple_pagination .current {
+    font-style: normal;
+    font-weight: bold;
+    background-color: #bebebe;
+    display: inline-block;
+    width: 1.4em;
+    height: 1.4em;
+    line-height: 1.5;
+    -moz-border-radius: 1em;
+    -webkit-border-radius: 1em;
+    border-radius: 1em;
+    text-shadow: rgba(255, 255, 255, 0.8) 1px 1px 1px; }
+  .apple_pagination a {
+    text-decoration: none;
+    color: black; }
+    .apple_pagination a:hover, .apple_pagination a:focus {
+      text-decoration: underline; }
+/* end apple pagination*/
+
+/* author bio detail*/
+.author-bio {
+    background-color: #fbfbfb;
+    padding: 20px;
+    border-radius: 5px;
+    border: 3px solid #d2d2d2;
+    margin: 20px 0;
+
+  img {
+    border-radius: 50%;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 1.8em;
+    color: #909090;
+  }
+
+}
